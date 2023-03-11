@@ -1,0 +1,6 @@
+[submodule "SigningUtilities"]
+	path = SigningUtilities
+	url = git@github.com:JPADN/SigningUtilities.git
+[submodule "SignApp"]
+	path = SignApp
+	url = git@github.com:JPADN/SignApp.git
