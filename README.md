@@ -9,15 +9,14 @@ Para as etapas que geram documentos como saída, estes estarão disponíveis ap�
 
 O JAR desta aplicação encontra-se em `SigningUtilities/out/artifacts/SigningUtilities_jar/SigninUtilities.jar`, e para executá-lo em um ambiente Docker é disponibilizado um Dockerfile em `SigningUtilities/Dockerfile`
 
-A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os comandos:
+A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os seguintes comandos no diretório raiz de SigningUtilities:
 
 ```
 docker build . -t signing-utilities
-docker run -v output:/output signing-utilities
+docker run -v ${PWD}/output:/output signing-utilities
 ```
 
 Note que é necessário declarar o volume (argumento `-v`) para que os documentos produzidos pela aplicação estejam disponíveis no sistema de arquivos do host.
-
 
 ### Etapa 4
 
@@ -27,7 +26,7 @@ Para que seja possível reutilizar o código das etapas anteriores, o JAR da apl
 
 O JAR desta aplicação encontra-se em `SignApp/out/artifacts/signapp_jar/signapp.jar`, e para executá-lo em um ambiente Docker é disponibilizado um Dockerfile em `SignApp/Dockerfile`.
 
-A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os comandos:
+A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os seguintes comandos no diretório raiz de SignApp:
 
 ```
 docker build . -t signapp
