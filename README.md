@@ -13,10 +13,10 @@ A fim de compilar a imagem Docker e iniciar um container a partir desta, execute
 
 ```
 docker build . -t signing-utilities
-docker run -v ${PWD}/output:/output signing-utilities
+docker run -v ${PWD}/etapas_1_2_output:/app/etapas_1_2_output signing-utilities
 ```
 
-Note que é necessário declarar o volume (argumento `-v`) para que os documentos produzidos pela aplicação estejam disponíveis no sistema de arquivos do host.
+Note que é necessário declarar o volume (argumento `-v`) para que os documentos produzidos pela aplicação estejam disponíveis no sistema de arquivos do host. `PWD` é uma variável de ambiente do Linux, caso você esteja executando em outro sistema operacional, substitua `${PWD}` pelo caminho **absoluto** do diretório onde você deseja que os arquivos sejam salvos.
 
 ### Etapa 4
 
