@@ -1,11 +1,18 @@
 # Desafio Prático do Processo Seletivo BRy
 ## Desenvolvedor Full Stack Java
 
+Para clonar este repositório junto com seus submódulos, execute: 
+```
+git clone --recurse-submodules git@github.com:JPADN/DesafioPraticoBRy.git no README
+```
+
 ### Etapas 1, 2 e 3
 
 As etapas 1, 2 e 3 estão implementadas no repositório SigningUtilities, pelo método main da classe Main. A etapa 1 prevê como saída um documento contendo o resultado do resumo criptográfico em hexadecimal, a etapa 2 prevê como saída um documento do tipo ".p7s" com a assinatura digital, enquanto que a etapa 3 prevê como saída um print no terminal de true (caso a assinatura seja válida) ou false (caso a assinatura seja inválida).
 
 Para as etapas que geram documentos como saída, estes estarão disponíveis após a execução da aplicação no diretório `SigningUtilities/etapas_1_2_output`. A saída prevista pela Etapa 1 está nomeada como `doc_hex_digest.txt` enquanto que a da Etapa 2 está nomeada como `doc_signature.p7s`.
+
+(Estes mesmos arquivos podem ser encontrados também no diretório `anexos/`)
 
 O JAR desta aplicação encontra-se em `SigningUtilities/out/artifacts/SigningUtilities_jar/SigninUtilities.jar`, e para executá-lo em um ambiente Docker é disponibilizado um Dockerfile em `SigningUtilities/Dockerfile`
 
