@@ -14,9 +14,7 @@ Para as etapas que geram documentos como saída, estes estarão disponíveis ap�
 
 (Estes mesmos arquivos podem ser encontrados também no diretório `anexos/`)
 
-O JAR desta aplicação encontra-se em `SigningUtilities/out/artifacts/SigningUtilities_jar/SigninUtilities.jar`, e para executá-lo em um ambiente Docker é disponibilizado um Dockerfile em `SigningUtilities/Dockerfile`
-
-A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os seguintes comandos no diretório raiz de SigningUtilities:
+Para executar a aplicação é disponibilizado um Dockerfile, que irá compilar o código e executar o JAR produzido. A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os seguintes comandos no diretório raiz de SigningUtilities:
 
 ```
 docker build . -t signing-utilities
@@ -29,11 +27,9 @@ Note que é necessário declarar o volume (argumento `-v`) para que os documento
 
 Trata-se uma API Rest utilizando o framework Spring Boot e reutilizando o código criado nas etapas anteriores. Esta etapa foi implementada no repositório SignApp.
 
-Para que seja possível reutilizar o código das etapas anteriores, o JAR da aplicação SigningUtilities foi adicionado como dependência para a compilação do JAR de SignApp, desta forma as classes definidas em SigningUtilities ficam disponíveis para uso pelo SignApp.
+Para que seja possível reutilizar o código das etapas anteriores, o JAR da aplicação SigningUtilities foi adicionado como dependência de SignApp, desta forma as classes definidas em SigningUtilities ficam disponíveis para uso pelo SignApp.
 
-O JAR desta aplicação encontra-se em `SignApp/out/artifacts/signapp_jar/signapp.jar`, e para executá-lo em um ambiente Docker é disponibilizado um Dockerfile em `SignApp/Dockerfile`.
-
-A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os seguintes comandos no diretório raiz de SignApp:
+Para executar a aplicação é disponibilizado um Dockerfile, que irá compilar o código e executar o JAR produzido. A fim de compilar a imagem Docker e iniciar um container a partir desta, execute os seguintes comandos no diretório raiz de SignApp:
 
 ```
 docker build . -t signapp
